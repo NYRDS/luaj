@@ -92,9 +92,18 @@
 	
 	<target name="jar-jse" depends="compile">
 		<jar destfile="${jar.name.jse}">
-		    <fileset dir="build/jse/classes"/>
+		    <fileset dir="build/jse/classes">
+			<!-- Exclude unused luaj modules to reduce JAR size -->
+			<exclude name="luajc*.class"/>
+			<exclude name="org/luaj/vm2/luajc/**"/>
+			<exclude name="org/luaj/vm2/script/**"/>
+			<exclude name="org/luaj/vm2/server/**"/>
+			<exclude name="org/luaj/vm2/lib/jse/JseOsLib.class"/>
+			<exclude name="org/luaj/vm2/lib/jse/JseOsLib$*.class"/>
+			<exclude name="org/luaj/vm2/lib/jse/JseProcess*.class"/>
+		    </fileset>
 		    <fileset dir="src/jse/">
-				<include name="META-INF/services/**"/>
+			<include name="META-INF/services/**"/>
 		    </fileset>
 		</jar>
 	</target>
