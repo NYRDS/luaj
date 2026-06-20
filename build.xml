@@ -98,8 +98,6 @@
 			<exclude name="org/luaj/vm2/luajc/**"/>
 			<exclude name="org/luaj/vm2/script/**"/>
 			<exclude name="org/luaj/vm2/server/**"/>
-			<exclude name="org/luaj/vm2/lib/jse/JseOsLib.class"/>
-			<exclude name="org/luaj/vm2/lib/jse/JseOsLib$*.class"/>
 			<exclude name="org/luaj/vm2/lib/jse/JseProcess*.class"/>
 		    </fileset>
 		    <fileset dir="src/jse/">
