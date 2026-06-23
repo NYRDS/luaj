@@ -28,6 +28,8 @@ tasks.named<Jar>("jar") {
     exclude("org/luaj/vm2/luajc/**")
     exclude("org/luaj/vm2/script/**")
     exclude("org/luaj/vm2/server/**")
+    exclude("org/luaj/vm2/ast/**")
+    exclude("org/luaj/vm2/lib/jme/**")
     exclude("org/luaj/vm2/lib/jse/JseProcess*.class")
 
     // Include META-INF/services from src/jse
